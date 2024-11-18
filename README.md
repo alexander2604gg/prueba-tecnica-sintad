@@ -4,7 +4,7 @@ Este es un proyecto de ejemplo.
 
 ## Diagrama
 
-![Diagrama del flujo](imagenes/paginacion-1.png)
+![Diagrama del flujo](imagenes/paginacion-1.jpeg)
 
 Aquí se muestra el diagrama de flujo de la aplicación.
 
