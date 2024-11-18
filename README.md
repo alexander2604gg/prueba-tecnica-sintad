@@ -1,14 +1,7 @@
-# Mi Proyecto
+# Prueba técnica
 
-Este es un proyecto de ejemplo.
-
-## Diagrama
+## Paginacion para entidades
 
 ![Diagrama del flujo](imagenes/paginacion-1.jpeg)
+![Diagrama del flujo](imagenes/paginacion-2.jpeg)
 
-Aquí se muestra el diagrama de flujo de la aplicación.
-
-## Características
-
-- Fácil de usar
-- Alta escalabilidad
