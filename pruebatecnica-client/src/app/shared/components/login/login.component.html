@@ -1,0 +1,15 @@
+
+<form (ngSubmit)="authenticate()" class="p-4 rounded shadow-sm" style="max-width: 400px; margin: auto">
+  <h2 class="text-center">Iniciar sesión</h2>
+  <div class="mb-3">
+    <label for="username" class="form-label" style="font-weight: bold; color: #333;">Nombre de usuario</label>
+    <input type="text" [(ngModel)]="username" name="username" class="form-control" placeholder="Ingresa tu nombre de usuario">
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label" style="font-weight: bold; color: #333;">Contraseña</label>
+    <input type="password" [(ngModel)]="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu Contraseña">
+  </div>
+  <button
+  type="submit" class="btn w-100" style="background-color: #6f42c1; color: white; font-weight: bold;">Iniciar sesion</button>
+</form>

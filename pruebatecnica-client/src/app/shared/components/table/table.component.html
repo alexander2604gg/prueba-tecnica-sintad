@@ -1,0 +1,53 @@
+<div class="table-responsive">
+  <table class="table table-bordered table-hover table-sm">
+    <thead class="table-dark">
+      <tr>
+        <th *ngFor="let column of columns">
+          {{ columnNamesMap[column] || column }} <!-- Si no se encuentra el nombre, usamos el nombre original -->
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let row of data">
+        <td *ngFor="let column of columns">
+          <ng-container *ngIf="column !== 'links'; else linkContent">
+            {{ row[column] }}
+          </ng-container>
+          <ng-template #linkContent>
+            <!-- Mostrar íconos solo para acciones relevantes -->
+            <ng-container *ngFor="let link of row[column]">
+              <span *ngIf="!['self', 'list'].includes(link.rel)" class="me-2">
+                <a (click)="sendUrl(link.href , link.type , link.rel)" target="_blank" class="btn btn-sm" [ngClass]="getButtonClass(link.rel)">
+                  <i [ngClass]="getIconClass(link.rel)"></i>
+                </a>
+              </span>
+            </ng-container>
+          </ng-template>
+        </td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>
+
+<!-- Pagination -->
+<nav>
+  <ul class="pagination justify-content-center pagination-sm">
+    <li class="page-item" [class.disabled]="currentPage === 1">
+      <button class="page-link" (click)="changePage(currentPage - 1)">Previous</button>
+    </li>
+    <li
+      class="page-item"
+      *ngFor="let page of [].constructor(totalPages); let i = index"
+      [class.active]="currentPage === i + 1"
+    >
+      <button class="page-link" (click)="changePage(i + 1)">{{ i + 1 }}</button>
+    </li>
+    <li class="page-item" [class.disabled]="currentPage === totalPages">
+      <button class="page-link" (click)="changePage(currentPage + 1)">Next</button>
+    </li>
+  </ul>
+</nav>
+

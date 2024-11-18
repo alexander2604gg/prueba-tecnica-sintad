@@ -1,0 +1,49 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="razonSocial" class="form-label">Razón Social</label>
+      <input type="text" id="razonSocial" class="form-control" [(ngModel)]="entidad.razonSocial" name="razonSocial" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="nroDocumento" class="form-label">Número de Documento</label>
+      <input type="text" id="nroDocumento" class="form-control" [(ngModel)]="entidad.nroDocumento" name="nroDocumento" required>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="tipoDocumento" class="form-label">Tipo de Documento</label>
+      <select id="tipoDocumento" class="form-select" [(ngModel)]="entidad.idTipoDocumento" name="idTipoDocumento" required>
+        <option value="" disabled>Selecciona un tipo de documento</option>
+        <option *ngFor="let tipo of tiposDocumentos" [value]="tipo.id">{{ tipo.nombre }}</option>
+      </select>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="nombreComercial" class="form-label">Nombre Comercial</label>
+      <input type="text" id="nombreComercial" class="form-control" [(ngModel)]="entidad.nombreComercial" name="nombreComercial">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="tipoContribuyente" class="form-label">Tipo de Contribuyente</label>
+      <select id="tipoContribuyente" class="form-select" [(ngModel)]="entidad.idTipoContribuyente" name="idTipoContribuyente">
+        <option value="" disabled>Selecciona un tipo de contribuyente</option>
+        <option *ngFor="let tipo of tiposContribuyentes" [value]="tipo.id">{{ tipo.nombre }}</option>
+      </select>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="direccion" class="form-label">Dirección</label>
+      <input type="text" id="direccion" class="form-control" [(ngModel)]="entidad.direccion" name="direccion">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="telefono" class="form-label">Teléfono</label>
+      <input type="text" id="telefono" class="form-control" [(ngModel)]="entidad.telefono" name="telefono">
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
