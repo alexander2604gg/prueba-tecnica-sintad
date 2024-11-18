@@ -69,8 +69,8 @@ A continuación se describen los manejadores de excepciones implementados:
 
 - **Recurso no encontrado (ResourceNotFoundException)**: Captura cuando un recurso no se encuentra (por ejemplo, cuando se intenta acceder a una entidad que no existe en la base de datos). Se devuelve un objeto `ErrorResponseDto` con un mensaje de error y un código de estado `404 Not Found`.
 - Algunas respuestas:
----![Error 1](imagenes/error1.jpeg)
----![Error 2](imagenes/error2.jpeg)
+![Error 1](imagenes/error1.jpeg)
+![Error 2](imagenes/error2.jpeg)
 
 ## 8. Implementación de Pruebas Unitarias
 
