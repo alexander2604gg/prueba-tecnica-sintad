@@ -1,6 +1,7 @@
 # Prueba Técnica
 
-Este documento describe los aspectos principales de la implementación de la prueba técnica, incluyendo los endpoints de la API, manejo de tokens JWT, uso de Spring HATEOAS, paginación de entidades, eliminación lógica de entidades, actualización de entidades, y la implementación de pruebas unitarias tanto en el backend como en el frontend.
+Este documento describe los aspectos principales de la implementación de la prueba técnica, incluyendo los endpoints de la API, manejo de tokens JWT, uso de Spring HATEOAS, paginación de entidades, manejo global de
+excepciones y la implementación de pruebas unitarias tanto en el backend como en el frontend.
 
 ## 1. Endpoints en Swagger
 
@@ -38,7 +39,7 @@ Para manejar grandes volúmenes de datos, se implementó la paginación. A conti
 
 ## 5. Eliminar Entidades
 
-Opté por **no utilizar el método eliminar** en las entidades, ya que esta acción podría afectar información sensible. En lugar de ello, se opta por deshabilitar el estado de las entidades. El siguiente diagrama muestra cómo se realiza este proceso:
+Opté por **no utilizar el método eliminar** en las entidades, ya que esta acción podría afectar información sensible. En lugar de ello, se opta por deshabilitar el estado de las entidades.
 
 ![Diagrama de eliminación de entidad](imagenes/eliminar.jpeg)
 
